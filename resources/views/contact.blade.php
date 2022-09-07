@@ -34,12 +34,15 @@
                      <div class="col-lg-9">
                         <div class="right_header_info">
                            <ul>
-                              <li><a href="#"><img style="margin-right: 15px;" src="icon/1.png" alt="#" /></a></li>
-                              <li class="tytyu"><a href="#"><img style="margin-right: 15px;" src="icon/2.png"
-                                       alt="#" /></a></li>
-                              <li><a href="#"><img style="margin-right: 15px;" src="icon/3.png" alt="#" /></a></li>
-
-                              <li>
+                              {{-- <li>
+                                            <a href="#"><img style="margin-right: 15px; " src="icon/1.png" alt="#" /></a>
+                                        </li>
+                                        <li class="tytyu">
+                                            <a href="#"><img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img style="margin-right: 15px;" src="icon/3.png" alt="#" /></a>
+                                        </li> --}}
                                  <button type="button" id="sidebarCollapse">
                                     <img src="images/menu_icon.png" alt="#" />
                                  </button>
