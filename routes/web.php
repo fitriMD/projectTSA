@@ -1,11 +1,11 @@
 <?php
 
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\LayananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +28,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', [AboutController::class, 'index']);
 
-Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/berita', [BeritaController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'index']);
 
-Route::get('/product', [ProductController::class, 'index']);
+Route::get('/layanan', [LayananController::class, 'index']);
