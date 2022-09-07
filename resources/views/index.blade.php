@@ -19,7 +19,7 @@
                 <!-- header inner -->
                 <div class="header">
 
-                    <div class="container-fluid">
+                    <div class="container-fluid" style="background-color: darkgray">
 
                         <div class="row">
                             <div class="col-lg-3 logo_section">
@@ -34,15 +34,15 @@
                             <div class="col-lg-9">
                                 <div class="right_header_info">
                                     <ul>
-                                        <li>
-                                            <a href="#"><img style="margin-right: 15px;" src="icon/1.png" alt="#" /></a>
+                                        {{-- <li>
+                                            <a href="#"><img style="margin-right: 15px; " src="icon/1.png" alt="#" /></a>
                                         </li>
                                         <li class="tytyu">
                                             <a href="#"><img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
                                         </li>
                                         <li>
                                             <a href="#"><img style="margin-right: 15px;" src="icon/3.png" alt="#" /></a>
-                                        </li>
+                                        </li> --}}
 
                                         <li>
                                             <button type="button" id="sidebarCollapse">
@@ -65,7 +65,8 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10 mapimg">
                                 <div class="text-bg" style="text-size: 24px;">
-                                    <h1>Selamat Datang <br> <strong class="black_bold">Pengunjung Website Kelurahan Madiun Lor</strong><br></h1>
+                                    <h1 style="align-content: center">Selamat Datang </h1>
+                                    <h2> <strong class="black_bold">Pengunjung Website Kelurahan Madiun Lor</strong> </h2>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
