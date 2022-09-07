@@ -56,7 +56,8 @@
 
                </div>
                <div class="copyright">
-                  <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a></p>
+                        <p>Copyright 2019 <a href="https://html.design/">Kelurahan Madiun Lor</a>
+                        </p>
                </div>
             </div>
 
