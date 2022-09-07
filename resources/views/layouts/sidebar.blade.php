@@ -10,8 +10,8 @@
 
             <li class="active"> <a href="{{'/'}}">Home</a></li>
             <li> <a href="{{('/about')}}">About</a></li>
-            <li> <a href="{{('/product')}}">Berita</a></li>
-            <li> <a href="{{('/blog')}}">Layanan Publik</a></li>
+            <li> <a href="{{('/berita')}}">Berita</a></li>
+            <li> <a href="{{('/layanan')}}">Layanan Publik</a></li>
             <li> <a href="{{('/contact')}}">Contact us</a></li>
 
         </ul>

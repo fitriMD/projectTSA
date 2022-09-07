@@ -6,7 +6,7 @@
                      <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 
-                           <img class="logo1" src="images/logo1.jpg" />
+                           <img class="logo1" src="images/logo1.png" />
                         </div>
 
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -30,36 +30,40 @@
                            </ul>
                         </div>
                      </div>
-
-
-
                   </div>
                </div>
                <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <div class="new">
-                           <h3>Newsletter</h3>
-                           <form class="newtetter">
-                              <input class="tetter" placeholder="Your email" type="text" name="Your email">
-                              <button class="submit">Subscribe</button>
-                           </form>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="new">
+                                    <h3>Kelurahan Madiun Lor</h3>
+                                    <form class="newtetter">
+                                        <input class="tetter" placeholder="Berita" type="text" name="Your email">
+                                        <button class="submit">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="newtt">
+                                    <p>Website Kelurahan Madiun Lor di develop dengan tujuan 
+                                        untuk mempermudah penyebaran informasi yang mampu menjangkau
+                                        <br> seluruh lapisan masyarakat
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="col-md-12">
-                        <div class="newtt">
-                           <p>It is a long established fact that a reader will be distracted by the readable content of
-                              a page when looking at its layout. The point<br> of using Lorem I</p>
-                        </div>
-                     </div>
-                  </div>
 
-               </div>
-               <div class="copyright">
+                    </div>
+
+                    <div class="copyright">
                         <p>Copyright 2019 <a href="https://html.design/">Kelurahan Madiun Lor</a>
                         </p>
-               </div>
-            </div>
+                    </div>
 
-         </footer>
-         <!-- end footer -->
+                </div>
+
+            </footer>
+            <!-- end footer -->
+        </div>
+
+    </div>

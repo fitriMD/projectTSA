@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- mobile metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <!-- site metas -->
-    <title>Kelurahan Madiun Lor</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive-->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- fevicon -->
-    <link rel="icon" href="images/madiun.png" type="image/gif" />
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-    <!-- Tweaks for older IEs-->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-        media="screen">
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-</head>
-<!-- body -->
-
-<body class="main-layout">
+@extends('layouts.apps')
 
     <!-- loader  -->
     <div class="loader_bg">
@@ -46,6 +11,8 @@
 
         @extends('layouts.sidebar')
 
+@yield('content') 
+@section('content')
         <div id="content">
             <!-- header -->
             <header>
@@ -126,13 +93,12 @@
                                     <div class="row">
                                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                                             <div class="img_bg">
-                                                <h3>50% DISCOUNT<br> <strong class="black_nolmal">the latest
-                                                        collection</strong></h3>
+                                                <h3>WEBSITE<br> <strong class="black_nolmal">informatif media</strong></h3>
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                                             <div class="img_bg">
-                                                <figure><img src="images/discount.jpg" /></figure>
+                                                <figure><img src="images/madiun2.jpg" /></figure>
                                             </div>
                                         </div>
                                     </div>
@@ -146,13 +112,12 @@
                                     <div class="row">
                                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                                             <div class="img_bg">
-                                                <h3>50% DISCOUNT<br> <strong class="black_nolmal">the latest
-                                                        collection</strong></h3>
+                                            <h3>WEBSITE<br> <strong class="black_nolmal">informatif media</strong></h3>
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                                             <div class="img_bg">
-                                                <figure><img src="images/discount.jpg" /></figure>
+                                                <figure><img src="images/madiun2.jpg" /></figure>
                                             </div>
                                         </div>
                                     </div>
@@ -166,13 +131,12 @@
                                     <div class="row">
                                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                                             <div class="img_bg">
-                                                <h3>50% DISCOUNT<br> <strong class="black_nolmal">the latest
-                                                        collection</strong></h3>
+                                            <h3>WEBSITE<br> <strong class="black_nolmal">informatif media</strong></h3>
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                                             <div class="img_bg">
-                                                <figure><img src="images/discount.jpg" /></figure>
+                                                <figure><img src="images/madiun2.jpg" /></figure>
                                             </div>
                                         </div>
                                     </div>
@@ -183,37 +147,37 @@
                     </div>
                 </div>
             </div>
-            <!-- end discount -->
+            <!-- end madiun2 -->
             <!-- trending -->
             <div class="trending">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
                             <div class="title">
-                                <h2>Trending <strong class="black">Categories</strong></h2>
+                                <h2>Kelurahan <strong class="black">Madiun Lor</strong></h2>
 
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margitop">
-                            <div class="trending-box">
-                                <figure><img src="images/1.jpg" /></figure>
+                            <div class="trending-box" style="max-width: 569px; height:377px; margin-left: 50px;">
+                                <figure><img src="images/madiunlor.jpeg" /></figure>
                                 <h3>Outdoor</h3>
 
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                            <div class="trending-box">
-                                <figure><img src="images/2.jpg" /></figure>
-                                <h3>Living Room</h3>
+                        <div class="trending-box" style="max-width: 569px; height:377px; margin-left: 50px;">
+                                <figure><img src="images/madiunlor1.jpeg" /></figure>
+                                <h3>Outdoor</h3>
 
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margitop">
-                            <div class="trending-box">
-                                <figure><img src="images/3.jpg" /></figure>
-                                <h3>Bedroom Lighting</h3>
+                        <div class="trending-box" style="max-width: 569px; height:377px; margin-left: 50px;">
+                                <figure><img src="images/madiunlor2.jpeg" /></figure>
+                                <h3>Indoor</h3>
 
                             </div>
                         </div>
@@ -221,6 +185,7 @@
                     </div>
                 </div>
             </div>
+            <br></br> <br></br>
             <!-- end trending -->
 
             <!-- our brand -->
@@ -229,7 +194,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="title">
-                                <h2>Featured <strong class="black">Brands</strong></h2>
+                                <h2>Kegiatan <strong class="black">Terkini</strong></h2>
 
                             </div>
                         </div>
@@ -239,32 +204,32 @@
             <div class="container-fluid">
                 <div class="brand-bg">
                     <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
-                            <div class="brand-box">
-                                <i><img src="icon/p1.png" /></i>
-                                <h3>Jane Lauren Design Chair</h3>
-                                <span>$80.00</span>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop" style="margin-bottom:100px;">
+                        <div class="brand-box" style="width:400px; height: 300px;">
+                                <i><img src="images/madiunlor3.jpeg"/></i>
+                                <h3>Gebyar HUT  </h3>
+                                <span>September 7, 2022</span>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
-                            <div class="brand-box">
-                                <i><img src="icon/p2.png" /></i>
-                                <h3>Jane Lauren Design Chair</h3>
-                                <span>$80.00</span>
+                             <div class="brand-box" style="width:400px; height: 300px;">
+                            <i><img src="images/madiunlor4.jpeg" /></i>
+                                <h3>Penyaluran BLTD </h3>
+                                <span>September 7, 2022</span>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                            <div class="brand-box">
-                                <i><img src="icon/p3.png" /></i>
-                                <h3>Jane Lauren Design Chair</h3>
-                                <span>$80.00</span>
+                             <div class="brand-box" style="width:400px; height: 300px;">
+                            <i><img src="images/madiunlor6.jpeg" /></i>
+                                <h3>Jalan Santai</h3>
+                                <span>September 7, 2022</span>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                            <div class="brand-box">
-                                <i><img src="icon/p4.png" /></i>
-                                <h3>Jane Lauren Design Chair</h3>
-                                <span>$80.00</span>
+                             <div class="brand-box" style="width:400px; height: 300px;">
+                            <i><img src="images/madiunlor5.jpeg" /></i>
+                                <h3>Kirab Budaya</h3>
+                                <span>September 7, 2022</span>
                             </div>
                         </div>
                     </div>
@@ -283,30 +248,32 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 padddd">
-                            <div class="map_section">
-                                <div id="map">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
+                    <div class="position-relative rounded overflow-hidden h-100">
+                        <iframe class="position-relative w-100 h-100"
+                        src="https://maps.google.com/maps?q=madiun%20lor&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                    </div>
+                </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 padddd">
                             <form class="main_form">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control" placeholder="Name" type="text" name="Name">
+                                        <input class="form-control" placeholder="Nama" type="text" name="Name">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <input class="form-control" placeholder="Email" type="text" name="Email">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control" placeholder="Phone" type="text" name="Phone">
+                                        <input class="form-control" placeholder="Telepon" type="text" name="Phone">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <textarea class="textarea" placeholder="Message" type="text"
+                                        <textarea class="textarea" placeholder="Pesan" type="text"
                                             name="Message"></textarea>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <button class="send">Send</button>
+                                        <button class="send">Kirim</button>
                                     </div>
                                 </div>
                             </form>
@@ -318,44 +285,3 @@
             <!--  footer -->
             @extends('layouts.footer')
             <!-- end footer -->
-        </div>
-
-    </div>
-
-    <div class="overlay"></div>
-
-    <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <!-- sidebar -->
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-   
-    <script>
-        // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-      // Australia.
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 11,
-          center: {lat: 40.645037, lng: -73.880224},
-          });
-
-      var image = 'images/maps-and-flags.png';
-      var beachMarker = new google.maps.Marker({
-          position: {lat: 40.645037, lng: -73.880224},
-          map: map,
-          icon: image
-        });
-      }
-    </script>
-    <!-- google map js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
-    </script>
-    <!-- end google map js -->
-
-</body>
-
-</html>
