@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>niture</title>
+   <title>Kelurahan Madiun Lor</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -20,7 +20,7 @@
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
    <!-- fevicon -->
-   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <link rel="icon" href="images/madiun.png" type="image/gif" />
    <!-- Scrollbar Custom CSS -->
    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
@@ -220,11 +220,11 @@
 
 
                            <ul class="lik">
-                              <li> <a href="index.html">Home</a></li>
-                              <li> <a href="about.html">About</a></li>
-                              <li> <a href="product.html">Product</a></li>
-                              <li> <a href="blog.html">Blog</a></li>
-                              <li> <a href="contact.html">Contact us</a></li>
+                              <li> <a href="{{'/'}}">Home</a></li>
+                              <li> <a href="{{('/about')}}">About</a></li>
+                              <li> <a href="{{('/product')}}">Berita</a></li>
+                              <li> <a href="{{('/blog')}}">Layanan Publik</a></li>
+                              <li> <a href="{{('/contact')}}">Contact us</a></li>
                            </ul>
                         </div>
 
