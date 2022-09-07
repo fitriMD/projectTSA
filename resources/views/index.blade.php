@@ -59,7 +59,7 @@
                                 <div class="full">
                                     <div class="center-desk">
                                         <div class="logo">
-                                            <a href="index.html"><img src="images/logo.jpg" alt="#"></a>
+                                            <a href="index.html"><img src="images/logo1.png" alt="#"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -97,14 +97,14 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mapimg">
-                                <div class="text-bg">
-                                    <h1>The latest <br> <strong class="black_bold">furniture Design</strong><br></h1>
+                                <div class="text-bg" style="text-size: 24px;">
+                                    <h1>Selamat Datang <br> <strong class="black_bold">Pengunjung Website Kelurahan Madiun Lor</strong><br></h1>
                                     <a href="#">Shop Now <i class='fa fa-angle-right'></i></a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <div class="text-img">
-                                    <figure><img src="images/bg.jpg" /></figure>
+                                <div class="text-img" style="backgroud-color: #666666;">
+                                    <figure><img src="images/madiun.jpg" /></figure>
                                 </div>
                             </div>
                         </div>
