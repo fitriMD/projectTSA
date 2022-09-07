@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>niture</title>
+    <title>Kelurahan Madiun Lor</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,7 +20,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link rel="icon" href="images/madiun.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
@@ -59,7 +59,7 @@
                                 <div class="full">
                                     <div class="center-desk">
                                         <div class="logo">
-                                            <a href="index.html"><img src="images/logo1.png" alt="#"></a>
+                                            <a href="{{'/'}}"><img src="images/logo1.png" alt="#"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -96,10 +96,9 @@
                 <div class="banner_main">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mapimg">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10 mapimg">
                                 <div class="text-bg" style="text-size: 24px;">
                                     <h1>Selamat Datang <br> <strong class="black_bold">Pengunjung Website Kelurahan Madiun Lor</strong><br></h1>
-                                    <a href="#">Shop Now <i class='fa fa-angle-right'></i></a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -317,70 +316,7 @@
             </div>
             <!-- end map -->
             <!--  footer -->
-            <footer>
-                <div class="footer">
-                    <div class="container-fluid">
-                        <div class="border1">
-                            <div class="row">
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-
-                                    <img class="logo1" src="images/logo1.jpg" />
-                                </div>
-
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-
-                                    <ul class="lik">
-                                        <li> <a href="{{'/'}}">Home</a></li>
-                                        <li> <a href="{{('/about')}}">About</a></li>
-                                        <li> <a href="{{('/product')}}">Product</a></li>
-                                        <li> <a href="{{('/blog')}}">Blog</a></li>
-                                        <li> <a href="{{('/contact')}}">Contact us</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                                    <ul class="sociel">
-                                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="new">
-                                    <h3>Newsletter</h3>
-                                    <form class="newtetter">
-                                        <input class="tetter" placeholder="Your email" type="text" name="Your email">
-                                        <button class="submit">Subscribe</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="newtt">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout. The point
-                                        <br> of using Lorem I
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="copyright">
-                        <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a>
-                        </p>
-                    </div>
-
-                </div>
-
-            </footer>
+            @extends('layouts.footer')
             <!-- end footer -->
         </div>
 
