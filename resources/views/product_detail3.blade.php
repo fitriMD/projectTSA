@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -41,35 +42,8 @@
     <div class="wrapper">
 
         <!-- end loader -->
-        <div class="sidebar">
-            <!-- Sidebar  -->
-            <nav id="sidebar">
-
-                <div id="dismiss">
-                    <i class="fa fa-arrow-left"></i>
-                </div>
-
-                <ul class="list-unstyled components">
-
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li class="active">
-                        <a href="product.html">Product</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-
-            </nav>
-        </div>
+        <!-- Sidebar  -->
+        @extends('layouts.sidebar')
 
         <div id="content">
             <!-- header -->
@@ -134,21 +108,25 @@
                                 <div class="product-detail-side">
                                     <span><del>$679.89</del></span><span class="new-price">$547.60</span>
                                     <span class="rating">
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star-o" aria-hidden="true"></i>
-                     </span>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </span>
                                     <span class="review">(5 customer review)</span>
                                 </div>
                                 <div class="detail-contant">
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                        turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor
+                                        sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
+                                        mi vitae est. Mauris placerat eleifend leo.
                                         <br><span class="stock">2 in stock</span>
                                     </p>
                                     <form class="cart" method="post" action="shop-cart.html">
                                         <div class="quantity">
-                                            <input step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
+                                            <input step="1" min="1" max="5" name="quantity" value="1" title="Qty"
+                                                class="input-text qty text" size="4" type="number">
                                         </div>
                                         <button type="submit" class="bt_main">Add to cart</button>
                                     </form>
@@ -161,16 +139,30 @@
                             <div class="full">
                                 <div class="tab_bar_section">
                                     <ul class="nav nav-tabs" role="tablist">
-                                        <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#description">Description</a> </li>
-                                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#reviews">Reviews (2)</a> </li>
+                                        <li class="nav-item"> <a class="nav-link active" data-toggle="tab"
+                                                href="#description">Description</a> </li>
+                                        <li class="nav-item"> <a class="nav-link" data-toggle="tab"
+                                                href="#reviews">Reviews (2)</a> </li>
                                     </ul>
                                     <!-- Tab panes -->
                                     <div class="tab-content">
                                         <div id="description" class="tab-pane active">
                                             <div class="product_desc">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac elementum elit. Morbi eu arcu ipsum. Aliquam lobortis accumsan quam ac convallis. Fusce elit mauris, aliquet at odio vel, convallis vehicula nisi. Morbi vitae porttitor dolor. Integer eget metus sem. Nam venenatis mauris vel leo pulvinar, id rutrum dui varius. Nunc ac varius quam, non convallis magna. Donec suscipit commodo dapibus.
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac
+                                                    elementum elit. Morbi eu arcu ipsum. Aliquam lobortis accumsan quam
+                                                    ac convallis. Fusce elit mauris, aliquet at odio vel, convallis
+                                                    vehicula nisi. Morbi vitae porttitor dolor. Integer eget metus sem.
+                                                    Nam venenatis mauris vel leo pulvinar, id rutrum dui varius. Nunc ac
+                                                    varius quam, non convallis magna. Donec suscipit commodo dapibus.
                                                     <br>
-                                                    <br>Vestibulum et ullamcorper ligula. Morbi bibendum tempor rutrum. Pelle tesque auctor purus id molestie ornare.Donec eu lobortis risus. Pellentesque sed aliquam lorem. Praesent pulvinar lorem vel mauris ultrices posuere. Phasellus elit ex, gravida a semper ut, venenatis vitae diam. Nullam eget leo massa. Aenean eu consequat arcu, vitae scelerisque quam. Suspendisse risus turpis, pharetra a finibus vitae, lobortis et mi.</p>
+                                                    <br>Vestibulum et ullamcorper ligula. Morbi bibendum tempor rutrum.
+                                                    Pelle tesque auctor purus id molestie ornare.Donec eu lobortis
+                                                    risus. Pellentesque sed aliquam lorem. Praesent pulvinar lorem vel
+                                                    mauris ultrices posuere. Phasellus elit ex, gravida a semper ut,
+                                                    venenatis vitae diam. Nullam eget leo massa. Aenean eu consequat
+                                                    arcu, vitae scelerisque quam. Suspendisse risus turpis, pharetra a
+                                                    finibus vitae, lobortis et mi.
+                                                </p>
                                             </div>
                                         </div>
                                         <div id="reviews" class="tab-pane fade">
@@ -184,15 +176,19 @@
                                                     </div>
                                                     <div class="col-lg-10 col-md-10 col-sm-8">
                                                         <h5>Ravi</h5>
-                                                        <p><span class="c_date">July 23, 2019</span> | <span><a rel="nofollow" class="comment-reply-link" href="#">Reply</a></span></p>
+                                                        <p><span class="c_date">July 23, 2019</span> | <span><a
+                                                                    rel="nofollow" class="comment-reply-link"
+                                                                    href="#">Reply</a></span></p>
                                                         <span class="rating">
-                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                 <i class="fa fa-star-o" aria-hidden="true"></i>
-                                 </span>
-                                                        <p class="msg">ThisThis book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, “Lorem ipsum dolor sit amet..
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </span>
+                                                        <p class="msg">ThisThis book is a treatise on the theory of
+                                                            ethics, very popular during the Renaissance. The first line
+                                                            of Lorem Ipsum, “Lorem ipsum dolor sit amet..
                                                         </p>
                                                     </div>
                                                 </div>
@@ -204,15 +200,21 @@
                                                     </div>
                                                     <div class="col-lg-10 col-md-10 col-sm-8">
                                                         <h5>Ravi</h5>
-                                                        <p><span class="c_date">July 23, 2019</span> | <span><a rel="nofollow" class="comment-reply-link" href="#">Reply</a></span></p>
+                                                        <p><span class="c_date">July 23, 2019</span> | <span><a
+                                                                    rel="nofollow" class="comment-reply-link"
+                                                                    href="#">Reply</a></span></p>
                                                         <span class="rating">
-                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                 <i class="fa fa-star-o" aria-hidden="true"></i>
-                                 </span>
-                                                        <p class="msg">Nunc augue purus, posuere in accumsan sodales ac, euismod at est. Nunc faccumsan ermentum consectetur metus placerat mattis. Praesent mollis justo felis, accumsan faucibus mi maximus et. Nam hendrerit mauris id scelerisque placerat. Nam vitae imperdiet turpis</p>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </span>
+                                                        <p class="msg">Nunc augue purus, posuere in accumsan sodales ac,
+                                                            euismod at est. Nunc faccumsan ermentum consectetur metus
+                                                            placerat mattis. Praesent mollis justo felis, accumsan
+                                                            faucibus mi maximus et. Nam hendrerit mauris id scelerisque
+                                                            placerat. Nam vitae imperdiet turpis</p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -220,7 +222,10 @@
                                                         <div class="full review_bt_section">
                                                             <div class="float-right">
 
-                                                                <a class="bt_main" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Leave a Review</a>
+                                                                <a class="bt_main" data-toggle="collapse"
+                                                                    href="#collapseExample" role="button"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="collapseExample">Leave a Review</a>
 
                                                             </div>
                                                         </div>
@@ -228,11 +233,17 @@
                                                         <div class="full">
 
                                                             <div id="collapseExample" class="full collapse commant_box">
-                                                                <form accept-charset="UTF-8" action="index.html" method="post">
-                                                                    <input id="ratings-hidden" name="rating" type="hidden">
-                                                                    <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." required=""></textarea>
+                                                                <form accept-charset="UTF-8" action="index.html"
+                                                                    method="post">
+                                                                    <input id="ratings-hidden" name="rating"
+                                                                        type="hidden">
+                                                                    <textarea class="form-control animated" cols="50"
+                                                                        id="new-review" name="comment"
+                                                                        placeholder="Enter your review here..."
+                                                                        required=""></textarea>
                                                                     <div class="full_bt center">
-                                                                        <button class="bt_main" type="submit">Save</button>
+                                                                        <button class="bt_main"
+                                                                            type="submit">Save</button>
                                                                     </div>
                                                                 </form>
                                                             </div>
@@ -299,15 +310,18 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="newtt">
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point
-                                        <br> of using Lorem I</p>
+                                    <p>It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point
+                                        <br> of using Lorem I
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                     <div class="copyright">
-                        <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a></p>
+                        <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a>
+                        </p>
                     </div>
                 </div>
 
