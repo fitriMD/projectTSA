@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,15 +25,11 @@ use App\Http\Controllers\HomeController;
 // Auth::routes();
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/blog', function () {
-    return view('blog');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
-Route::get('/product', function () {
-    return view('product');
-});
+
+Route::get('/about', [AboutController::class, 'index']);
+
+Route::get('blog', [BlogController::class, 'index']);
+
+Route::get('contact', [ContactController::class, 'index']);
+
+Route::get('product', [ProductController::class, 'index']);
