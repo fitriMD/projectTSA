@@ -31,6 +31,7 @@
             <div class="container">
                <div class="row product_style_3">
                   <!-- product -->
+                  @foreach ($semua as $all)
                   <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
                      <div class="full product">
                         <div class="product_img">
@@ -40,14 +41,15 @@
                            </div>
                         </div>
                         <div class="product_detail text_align_center">
-                           <p class="product_price">September 7, 2022</p>
-                           <p class="product_descr">Gebyar HUT</p>
+                           <p class="product_price">{{$all->tgl_berita}}</p>
+                           <p class="product_descr">{{$all->judul_berita}}</p>
                         </div>
                      </div>
                   </div>
+                  @endforeach
                   <!-- end product -->
                   <!-- product -->
-                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                      <div class="full product">
                         <div class="product_img">
                            <div class="center"> <img src="images/madiunlor4.jpeg" alt="#" />
@@ -60,10 +62,10 @@
                            <p class="product_descr">Penyaluran BLTD</p>
                         </div>
                      </div>
-                  </div>
+                  </div> -->
                   <!-- end product -->
                   <!-- product -->
-                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                      <div class="full product">
                         <div class="product_img">
                            <div class="center"> <img src="images/madiunlor5.jpeg" alt="#" />
@@ -76,7 +78,7 @@
                            <p class="product_descr">Kirab Budaya</p>
                         </div>
                      </div>
-                  </div>
+                  </div> -->
                   <!-- end product -->
                </div>
             </div>
