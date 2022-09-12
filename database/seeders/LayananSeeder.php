@@ -20,8 +20,7 @@ class LayananSeeder extends Seeder
                             Di kelurahan inilah berada hampir semua kantor instansi pemerintah. Inka sebagai kebanggaan Indonesia yang memproduksi kereta 
                             api baik untuk kebutuhan domestik maupun ekspor ada di wilayah ini...',
             'isi' => '',
-            'foto' => 'img/inka.jpg',
-            'kategori_id' => ''
+            'foto' => 'img/inka.jpg'
             ]
         ]);
     }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Layanan;
 
 class Kategori extends Model
 {
@@ -17,4 +18,9 @@ class Kategori extends Model
         'nama',
         'keterangan',
     ];
+
+    public function layanan()
+    {
+        return $this->belongsTo(Layanan::class);
+    }
 }
