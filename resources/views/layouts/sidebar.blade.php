@@ -10,12 +10,23 @@
 
             <li class="active"> <a href="{{'/'}}">Home</a></li>
             <li> <a href="{{('/about')}}">About</a></li>
+            
+            <li class="menu-item-has-children dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-newspaper-o"></i>Layanan Publik</a>
+                        <ul class="sub-menu children dropdown-menu" style="margin-left:-20px; width: 500px; height: 1100px;">
+        <li> <a href="layanankk">
+            Kartu Keluarga
+          </a>
+        </li>
+        <li> <a href="layananktp">
+            Kartu Tanda Penduduk
+          </a>
+        </li>
+      </ul>
+    </li>
             <li> <a href="{{('/berita')}}">Berita</a></li>
-            <li> <a href="{{('/layanan')}}">Layanan Publik</a></li>
+            <!-- <li> <a href="{{('/layanan')}}">Layanan Publik</a></li> -->
             <li> <a href="{{('/contact')}}">Contact us</a></li>
-
-        </ul>
-
     </nav>
 </div>
 <script type="text/javascript">

@@ -32,4 +32,6 @@ Route::get('/berita', [BeritaController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'index']);
 
-Route::get('/layanan', [LayananController::class, 'index']);
+// Route::get('/layanan', [LayananController::class, 'index']);
+Route::get('/layanankk', [LayananController::class, 'kk']);
+Route::get('/layananktp', [LayananController::class, 'ktp']);
