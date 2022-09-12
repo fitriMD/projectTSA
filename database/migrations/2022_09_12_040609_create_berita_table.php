@@ -17,6 +17,7 @@ class CreateBeritaTable extends Migration
             $table->id();
             $table->string('judul_berita');
             $table->date('tgl_berita');
+            $table->text('isi');
             $table->timestamps();
         });
     }
