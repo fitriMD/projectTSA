@@ -33,7 +33,8 @@
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
                      <div class="news-box">
                         <figure><img src="images/icon.png" alt="img" style="width:300px; height:300px; margin-left: 100px; margin-top: 50px;" /></figure>
-                        <h3>Pembuatan KTP</h3>
+                        <h3>{{$layanan->kategori->nama}}</h3>
+                        {{-- <h3>Pembuatan KK</h3>  --}}
                         <span> Dokumen</span>
                         <p>
                            Surat pengantar dari RT dan RW<br>
