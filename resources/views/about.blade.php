@@ -29,18 +29,19 @@
             </div>
          </div>
 
+         @foreach ($abouts as $data)
          <div class="about">
             <div class="container">
                <div class="row">
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                      <div class="aboutimg">
                         <h3>About us</h3>
-                        <p>Madiun Lor adalah sebuah kelurahan di wilayah Kecamatan Manguharjo, Kota Madiun, Provinsi Jawa Timur.
-                           Di kelurahan inilah berada hampir semua kantor instansi pemerintah. Inka sebagai kebanggaan 
-                           Indonesia yang memproduksi kereta api baik untuk kebutuhan domestik maupun ekspor ada di wilayah ini...</p>
+                        {{$data->deskripsi}}</p>
                         <a href="#">Read More</a>
                      </div>
                   </div>
+                  
+         @endforeach
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                      <div class="aboutimg" style="margin-top: 100px;">
                         <figure><img src="images/inka.jpg" /></figure>
