@@ -35,4 +35,4 @@ Route::get('/layanankk', [LayananController::class, 'kk']);
 Route::get('/layananktp', [LayananController::class, 'ktp']);
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
