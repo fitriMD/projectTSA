@@ -18,13 +18,11 @@ use App\Http\Controllers\LayananController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-// Auth::routes();
-
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
 
 Route::get('/about', [AboutController::class, 'index']);
 
@@ -35,3 +33,6 @@ Route::get('/contact', [ContactController::class, 'index']);
 // Route::get('/layanan', [LayananController::class, 'index']);
 Route::get('/layanankk', [LayananController::class, 'kk']);
 Route::get('/layananktp', [LayananController::class, 'ktp']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
