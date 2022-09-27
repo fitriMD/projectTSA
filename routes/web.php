@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +24,15 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [HomeController::class, 'index']);
-
 Route::get('/about', [AboutController::class, 'index']);
-
 Route::get('/berita', [BeritaController::class, 'index']);
-
 Route::get('/contact', [ContactController::class, 'index']);
+
+
+// halaman admin
+Route::get('/admin', [AdminController::class, 'home'])->middleware('auth');
+Route::get('/berita', [AdminController::class, 'index'])->middleware('auth');
+
 
 // Route::get('/layanan', [LayananController::class, 'index']);
 Route::get('/layanankk', [LayananController::class, 'kk']);
