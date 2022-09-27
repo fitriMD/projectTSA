@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Berita;
+use Illuminate\Support\Facades\DB;
 use Session;
 
 class AdminController extends Controller
@@ -15,7 +16,11 @@ class AdminController extends Controller
      */
 
     public function home() {
-        return view('admin.index');
+        $jumlah_user = DB::table('users')->count();
+        $jumlah_berita = DB::table('berita')->count();
+        $jumlah_layanan = DB::table('layanan')->count();
+        $kategori_layanan = DB::table('kategori')->count();
+        return view('admin.index', compact('jumlah_user', 'jumlah_berita', 'jumlah_layanan', 'kategori_layanan'));
     }
 
     public function index(Request $request)
