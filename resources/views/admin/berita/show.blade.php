@@ -38,65 +38,28 @@
             </ol>
           </div>
 
-          <!-- Row -->
-          <div class="row">
-            <!-- Datatables -->
-            <!-- DataTable with Hover -->
-            <div class="col-lg-12">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">DataTables with Hover</h6>
+          <br></br>
+            <div class="container mt-2">
+                <div class="row justify-content-center align-items-center">
+                    <div class="card" style="width: 50rem; margin-left: 50px;">
+                        <div class="card-header">
+                            <h5 style="font-size: 18px; font-family: Arial, Helvetica;"><b>Detail Data Berita</h5></b>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" style="font-size: 16px;"><b>Judul Berita: </b>{{$data->judul_berita}}</li>
+                                <li class="list-group-item" style="font-size: 16px;"><b>Tanggal Terbit: </b>{{$data->tgl_berita}}</li>
+                                <li class="list-group-item" style="font-size: 16px;"><b>Isi Berita: </b>{!!$data->isi!!}</li>
+                                <li class="list-group-item" style="font-size: 16px;"><b>Foto Berita</li>
+                                <li class="list-group-item"><img style="width: 200px" src="{{asset('gambar/'.$data->gambar)}}"></li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-success mt-3" href="{{ route('admin.berita.index') }}" style="font-size: 16px; margin-left: 40px">Kembali</a>
+                        <br></br>
+                    </div>
                 </div>
-                <div class="table-responsive p-3">
-                  <table class="table align-items-center table-flush table-hover" id="dataTableHover">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>Judul Berita</th>
-                        <th>Isi</th>
-                        <th>Foto</th>
-                        <th>Tanggal Berita</th>
-                        <th>Aksi</th>
-                      </tr>
-                    </thead>
-                    <tfoot>
-                      <tr>
-                      <th>Judul Berita</th>
-                        <th>Isi</th>
-                        <th>Foto</th>
-                        <th width="150px;">Aksi</th>
-                      </tr>
-                    </tfoot>
-                    <tbody>
-                    @foreach($data as $d)
-                        <tr>
-                            <td>{{$d->judul_berita}}</td>
-                            <td>{{$d->isi}}</td>
-                            <td><img style="width: 200px" src="{{asset('gambar/'.$d->gambar)}}"></td></td>
-                            <td>{{$d->tgl_berita}}</td>
-                            <td>
-                                <a href="{{route('berita.show',$d->id)}}" class="btn btn-info btn-sm">DETAIL</a>
-                                <a href="{{route('berita.delete',$d->id)}}" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini ?')" >HAPUS</a>
-                                <a href="{{route('berita.edit',$d->id)}}" class="btn btn-success btn-sm">EDIT</a>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                  </table>
-                </div>
-              </div>
             </div>
-          </div>
-          <!--Row-->
-
-          <!-- Documentation Link -->
-          <div class="row">
-            <div class="col-lg-12">
-              <p>DataTables is a third party plugin that is used to generate the demo table below. For more information
-                about DataTables, please visit the official <a href="https://datatables.net/" target="_blank">DataTables
-                  documentation.</a></p>
-            </div>
-          </div>
-
+            <br></br>
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
@@ -145,7 +108,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="js/ruang-berita.min.js"></script>
+  <script src="js/ruang-admin.min.js"></script>
   <!-- Page level plugins -->
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>

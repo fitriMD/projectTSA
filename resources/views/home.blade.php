@@ -185,34 +185,16 @@
             <div class="container-fluid">
                 <div class="brand-bg">
                     <div class="row">
+                    @foreach ($latest as $new)
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop" style="margin-bottom:100px;">
                         <div class="brand-box" style="width:400px; height: 300px;">
-                                <i><img src="images/madiunlor3.jpeg"/></i>
-                                <h3>Gebyar HUT  </h3>
-                                <span>September 7, 2022</span>
+                                <i><img src="{{asset('gambar/'.$new->gambar)}}"/></i>
+                                <h3>{{$new->judul_berita}}</h3>
+                                <span>{{$new->tgl_berita}}</span>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
-                             <div class="brand-box" style="width:400px; height: 300px;">
-                            <i><img src="images/madiunlor4.jpeg" /></i>
-                                <h3>Penyaluran BLTD </h3>
-                                <span>September 7, 2022</span>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                             <div class="brand-box" style="width:400px; height: 300px;">
-                            <i><img src="images/madiunlor6.jpeg" /></i>
-                                <h3>Jalan Santai</h3>
-                                <span>September 7, 2022</span>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                             <div class="brand-box" style="width:400px; height: 300px;">
-                            <i><img src="images/madiunlor5.jpeg" /></i>
-                                <h3>Kirab Budaya</h3>
-                                <span>September 7, 2022</span>
-                            </div>
-                        </div>
+                        @endforeach
+                       
                     </div>
                 </div>
             </div>

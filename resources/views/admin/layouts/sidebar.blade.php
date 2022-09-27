@@ -56,8 +56,8 @@
         <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Berita</h6>
-            <a class="collapse-item" href="/berita">Show Data Berita</a>
-            <a class="collapse-item" href="datatables.html">Tambah Data</a>
+            <a class="collapse-item" href="/beritaAdmin">Show Data Berita</a>
+            <a class="collapse-item" href="{{route('berita.create')}}">Tambah Data</a>
           </div>
         </div>
       </li>
