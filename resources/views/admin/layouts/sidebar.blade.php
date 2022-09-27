@@ -15,35 +15,31 @@
       <div class="sidebar-heading">
         Features
       </div>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
           <i class="far fa-fw fa-window-maximize"></i>
-          <span>Bootstrap UI</span>
+          <span>Layanan KTP</span>
         </a>
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Bootstrap UI</h6>
-            <a class="collapse-item" href="alerts.html">Alerts</a>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="dropdowns.html">Dropdowns</a>
-            <a class="collapse-item" href="modals.html">Modals</a>
-            <a class="collapse-item" href="popovers.html">Popovers</a>
-            <a class="collapse-item" href="progress-bar.html">Progress Bars</a>
+            <h6 class="collapse-header">Layanan KTP</h6>
+            <a class="collapse-item" href="alerts.html">Show Data Layanan</a>
+            <a class="collapse-item" href="buttons.html">Tambah Data Layanan</a>
           </div>
         </div>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
           aria-controls="collapseForm">
           <i class="fab fa-fw fa-wpforms"></i>
-          <span>Forms</span>
+          <span>Layanan Publik</span>
         </a>
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Layanan</h6>
-            <a class="collapse-item" href="form_basics.html">Show Data Kayanan</a>
-            <a class="collapse-item" href="form_advanceds.html">Tambah Layanan</a>
+            <a class="collapse-item" href="form_basics.html">Show Data Layanan </a>
+            <a class="collapse-item" href="form_advanceds.html">Tambah Layanan </a>
           </div>
         </div>
       </li>
