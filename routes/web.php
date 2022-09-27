@@ -31,8 +31,13 @@ Route::get('/contact', [ContactController::class, 'index']);
 
 // halaman admin
 Route::get('/admin', [AdminController::class, 'home'])->middleware('auth');
-Route::get('/berita', [AdminController::class, 'index'])->middleware('auth');
-
+Route::get('/beritaAdmin', [AdminController::class, 'index'])->name('admin.berita.index')->middleware('auth');
+Route::get('/berita-create','App\Http\Controllers\AdminController@create')->name('berita.create')->middleware('auth');
+Route::post('/berita-create','App\Http\Controllers\AdminController@store')->name('berita.create')->middleware('auth');
+Route::get('/beritaShow-{id}','App\Http\Controllers\AdminController@show')->name('berita.show')->middleware('auth');
+Route::get('/beritaEdit-{id}','App\Http\Controllers\AdminController@edit')->name('berita.edit')->middleware('auth');
+Route::post('beritaEdit-{id}','App\Http\Controllers\AdminController@update')->name('berita.edit')->middleware('auth');
+Route::get('/beritaDelete-{id}','App\Http\Controllers\AdminController@destroy')->name('berita.delete')->middleware('auth');
 
 // Route::get('/layanan', [LayananController::class, 'index']);
 Route::get('/layanankk', [LayananController::class, 'kk']);

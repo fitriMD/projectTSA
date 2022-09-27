@@ -41,9 +41,9 @@
         </a>
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Forms</h6>
-            <a class="collapse-item" href="form_basics.html">Form Basics</a>
-            <a class="collapse-item" href="form_advanceds.html">Form Advanceds</a>
+            <h6 class="collapse-header">Layanan</h6>
+            <a class="collapse-item" href="form_basics.html">Show Data Kayanan</a>
+            <a class="collapse-item" href="form_advanceds.html">Tambah Layanan</a>
           </div>
         </div>
       </li>
@@ -51,13 +51,13 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
           aria-controls="collapseTable">
           <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span>
+          <span>Berita</span>
         </a>
         <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Berita</h6>
-            <a class="collapse-item" href="/berita">Show Data Berita</a>
-            <a class="collapse-item" href="datatables.html">Tambah Data</a>
+            <a class="collapse-item" href="/beritaAdmin">Show Data Berita</a>
+            <a class="collapse-item" href="{{route('berita.create')}}">Tambah Data</a>
           </div>
         </div>
       </li>

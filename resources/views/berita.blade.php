@@ -35,7 +35,7 @@
                   <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
                      <div class="full product">
                         <div class="product_img">
-                           <div class="center"> <img src="images/madiunlor3.jpeg" alt="#" />
+                           <div class="center"> <img src="{{asset('gambar/'.$all->gambar)}}" alt="#" />
                               <div class="overlay_hover"> <a class="add-bt" href="product_detail3.html">Read More</a>
                               </div>
                            </div>

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Berita;
+use Illuminate\Support\Facades\DB;
+use Session;
 
 class AdminController extends Controller
 {
@@ -13,12 +16,22 @@ class AdminController extends Controller
      */
 
     public function home() {
-        return view('admin.index');
+        $jumlah_user = DB::table('users')->count();
+        $jumlah_berita = DB::table('berita')->count();
+        $jumlah_layanan = DB::table('layanan')->count();
+        $kategori_layanan = DB::table('kategori')->count();
+        return view('admin.index', compact('jumlah_user', 'jumlah_berita', 'jumlah_layanan', 'kategori_layanan'));
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.berita.index');
+        if ($request->has('search')) { // Jika ingin melakukan pencarian judul
+            $data = Berita::where('judul', 'like', "%" . $request->search . "%")->paginate(5);
+        } else { // Jika tidak melakukan pencarian judul
+            //fungsi eloquent menampilkan data menggunakan pagination
+            $data = Berita::orderBy('id', 'desc')->paginate(10); // Pagination menampilkan 5 data
+        }
+        return view('admin.berita.index', compact('data'));
     }
 
     /**
@@ -28,7 +41,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.berita.create');
     }
 
     /**
@@ -39,7 +52,24 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file = $request->file('gambar');
+        $org = $file->getClientOriginalName();
+        $path = 'gambar';
+        $file->move($path,$org);
+
+        $Berita = new Berita;
+        $Berita->judul_berita = $request->judul_berita;
+        $Berita->tgl_berita = date('Y-m-d');
+        $Berita->isi = $request->isi;
+        $Berita->gambar = $org;
+        $Berita->save();
+        if ($Berita) {
+            Session::flash('success','Sukses Tambah Data'); 
+            return redirect()->route('admin.berita.index');
+        } else {
+            Session::flash('success','Failed Tambah Data');
+            return redirect()->route('admin.berita.index');
+        }
     }
 
     /**
@@ -50,7 +80,8 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Berita::find($id);
+        return view('admin.berita.show',compact('data'));
     }
 
     /**
@@ -61,7 +92,8 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $berita = Berita::find($id);
+        return view('admin.berita.edit',compact('berita'));
     }
 
     /**
@@ -73,7 +105,39 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $gambar = $request->file('gambar');
+        if ($gambar == "") {
+            $Berita = Berita::find($id);
+            $Berita->judul_berita = $request->judul_berita;
+            $Berita->isi = $request->isi;
+            $Berita->save();
+
+           if ($Berita) {
+            Session::flash('success','Sukses Update Data');
+                return redirect()->route('admin.berita.index');
+            } else {
+                Session::flash('success','Failed Update Data');
+                return redirect()->route('admin.berita.index');
+            }
+        } else {
+            $file = $request->file('gambar');
+            $org = $file->getClientOriginalName();
+            $path = 'gambar';
+            $file->move($path,$org);
+
+            $Berita = Berita::find($id) ;
+            $Berita->judul_berita = $request->judul_berita;
+            $Berita->isi = $request->isi;
+            $Berita->gambar = $org;
+            $Berita->save();
+            if ($Berita) {
+                Session::flash('success','Sukses Update Data');
+                return redirect()->route('admin.berita.index');
+            } else {
+                Session::flash('success','Failed Update Data');
+                return redirect()->route('admin.berita.index');
+            }
+        }
     }
 
     /**
@@ -84,6 +148,15 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Berita = Berita::find($id);
+        $Berita->delete();
+         if ($Berita) {
+            Session::flash('success','Sukses Hapus Data'); 
+            return redirect()->route('admin.berita.index');
+        } else {
+            Session::flash('Berita Gagal Dihapus','Gagal');
+            return redirect()->route('admin.berita.index');
+        }
+
     }
 }

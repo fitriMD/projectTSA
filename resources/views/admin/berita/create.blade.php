@@ -30,7 +30,7 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 class="h3 mb-0 text-gray-800">Data Berita</h1>
+            <h1 class="h3 mb-0 text-gray-800">Data Berita</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="./">Home</a></li>
               <li class="breadcrumb-item">Berita</li>
@@ -38,64 +38,25 @@
             </ol>
           </div>
 
-          <!-- Row -->
-          <div class="row">
-            <!-- Datatables -->
-            <!-- DataTable with Hover -->
-            <div class="col-lg-12">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">DataTables with Hover</h6>
+          <section class="section">
+            <div class="container mt-5" style="margin-left: -100px;">
+            <form action="{{route('berita.create')}}" method="post" enctype="multipart/form-data" style="margin-left: 220px;">
+                {{csrf_field()}}
+                <div class="form-group">
+                    <label>MASUKAN JUDUL BERITA</label>
+                    <input type="text" name="judul_berita" class="form-control" required=""  >
                 </div>
-                <div class="table-responsive p-3">
-                  <table class="table align-items-center table-flush table-hover" id="dataTableHover">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>Judul Berita</th>
-                        <th>Isi</th>
-                        <th>Foto</th>
-                        <th>Tanggal Berita</th>
-                        <th>Aksi</th>
-                      </tr>
-                    </thead>
-                    <tfoot>
-                      <tr>
-                      <th>Judul Berita</th>
-                        <th>Isi</th>
-                        <th>Foto</th>
-                        <th width="150px;">Aksi</th>
-                      </tr>
-                    </tfoot>
-                    <tbody>
-                    @foreach($data as $d)
-                        <tr>
-                            <td>{{$d->judul_berita}}</td>
-                            <td>{{$d->isi}}</td>
-                            <td><img style="width: 200px" src="{{asset('gambar/'.$d->gambar)}}"></td></td>
-                            <td>{{$d->tgl_berita}}</td>
-                            <td>
-                                <a href="{{route('berita.show',$d->id)}}" class="btn btn-info btn-sm">DETAIL</a>
-                                <a href="{{route('berita.delete',$d->id)}}" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini ?')" >HAPUS</a>
-                                <a href="{{route('berita.edit',$d->id)}}" class="btn btn-success btn-sm">EDIT</a>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                  </table>
+                <div class="form-group">
+                    <label>MASUKAN ISI BERITA</label>
+                    <textarea class="form-control" name="isi" required=""></textarea>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!--Row-->
-
-          <!-- Documentation Link -->
-          <div class="row">
-            <div class="col-lg-12">
-              <p>DataTables is a third party plugin that is used to generate the demo table below. For more information
-                about DataTables, please visit the official <a href="https://datatables.net/" target="_blank">DataTables
-                  documentation.</a></p>
-            </div>
-          </div>
+                <div class="form-group">
+                    <label>MASUKAN FOTO</label>
+                    <input type="file" name="gambar" class="form-control" required="">
+                </div>
+                <input type="submit" value="SIMPAN" class="btn btn-info">
+            </form>
+            <br></br>
 
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -145,7 +106,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="js/ruang-berita.min.js"></script>
+  <script src="js/ruang-admin.min.js"></script>
   <!-- Page level plugins -->
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
