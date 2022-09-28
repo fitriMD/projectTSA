@@ -30,7 +30,8 @@ Route::get('/contact', [ContactController::class, 'index']);
 
 
 // halaman admin
-Route::get('/admin', [AdminController::class, 'home'])->middleware('auth');
+Route::get('/admin', [AdminController::class, 'home']);
+// ->middleware('auth')
 Route::get('/beritaAdmin', [AdminController::class, 'index'])->name('admin.berita.index')->middleware('auth');
 Route::get('/berita-create','App\Http\Controllers\AdminController@create')->name('berita.create')->middleware('auth');
 Route::post('/berita-create','App\Http\Controllers\AdminController@store')->name('berita.create')->middleware('auth');
@@ -43,5 +44,14 @@ Route::get('/beritaDelete-{id}','App\Http\Controllers\AdminController@destroy')-
 Route::get('/layanankk', [LayananController::class, 'kk']);
 Route::get('/layananktp', [LayananController::class, 'ktp']);
 Auth::routes();
+
+Route::get('/layananAdmin', [AdminController::class, 'indexLayanan'])->name('admin.layanan.index')->middleware('auth');
+Route::get('/layanan-create','App\Http\Controllers\AdminController@createLayanan')->name('layanan.create')->middleware('auth');
+Route::post('/layanan-create','App\Http\Controllers\AdminController@storeLayanan')->name('layanan.create')->middleware('auth');
+Route::get('/layananShow-{id}','App\Http\Controllers\AdminController@showLayanan')->name('layanan.show')->middleware('auth');
+Route::get('/layananEdit-{id}','App\Http\Controllers\AdminController@editLayanan')->name('layanan.edit')->middleware('auth');
+Route::post('layananEdit-{id}','App\Http\Controllers\AdminController@updateLayanan')->name('layanan.edit')->middleware('auth');
+Route::get('/layananDelete-{id}','App\Http\Controllers\AdminController@destroyLayanan')->name('layanan.delete')->middleware('auth');
+
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
